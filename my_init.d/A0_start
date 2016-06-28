@@ -1,7 +1,8 @@
 #!/bin/sh
-/usr/lib/agora/.env/bin/pip install git+https://github.com/smartdeveloperhub/agora-client.git@develop
-/usr/lib/agora/.env/bin/pip install git+https://github.com/fserena/agora-stoa.git@develop
-/usr/lib/agora/.env/bin/pip install git+https://github.com/fserena/agora-stoa-client.git@develop
-/usr/lib/agora/.env/bin/pip install git+https://github.com/fserena/agora-scholar.git@develop
+if [ -z "$AGORA_SCHOLAR_VERSION" ]; then    
+    /usr/lib/agora/.env/bin/pip install --upgrade Agora-Scholar
+else
+	/usr/lib/agora/.env/bin/pip install --upgrade Agora-Scholar==$AGORA_SCHOLAR_VERSION
+fi
 
 /usr/lib/agora/.env/bin/scholar &
