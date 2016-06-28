@@ -1,0 +1,7 @@
+#!/bin/sh
+/usr/lib/agora/.env/bin/pip install git+https://github.com/smartdeveloperhub/agora-client.git@develop
+/usr/lib/agora/.env/bin/pip install git+https://github.com/fserena/agora-stoa.git@develop
+/usr/lib/agora/.env/bin/pip install git+https://github.com/fserena/agora-stoa-client.git@develop
+/usr/lib/agora/.env/bin/pip install git+https://github.com/fserena/agora-scholar.git@develop
+
+/usr/lib/agora/.env/bin/scholar &
